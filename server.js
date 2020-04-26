@@ -9,11 +9,11 @@ const mockUserData = [
     {name: 'Jill'}
 ]
 
-app.get("/users", (req, res)=>{
+app.get("/users/:id", (req, res)=>{
     res.json({
         success: true,
         message:'successfully got users. Nice',
-        users: mockUserData
+        users: req.params.id
     })
 })
 
